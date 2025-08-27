@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: youtube-mp3-downloader
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: YTDL_NO_UPDATE
+        value: true
+      - key: NODE_ENV
+        value: production
